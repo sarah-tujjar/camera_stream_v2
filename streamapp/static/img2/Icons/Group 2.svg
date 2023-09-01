@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148.655" height="31.163" viewBox="0 0 148.655 31.163">
+  <g id="Group_2" data-name="Group 2" transform="translate(0 2.322)">
+    <g id="Car_Status" data-name="Car Status" transform="translate(0 0)">
+      <text id="_21_kms" data-name="21 kms" transform="translate(109.655 19.678)" fill="#00ff89" font-size="20" font-family="SegoeUI-Light, Segoe UI" font-weight="300" letter-spacing="0.031em"><tspan x="-38.652" y="0">15 Hours</tspan></text>
+      <g id="Group_4" data-name="Group 4" transform="translate(0 0)">
+        <path id="Fill_1" data-name="Fill 1" d="M10.722,12.818H0V0H5.361Z" transform="translate(8.196 8.011)" fill="#00ff89"/>
+        <path id="Fill_2" data-name="Fill 2" d="M12.509,16.023H1.787A1.7,1.7,0,0,1,0,14.421V1.6A1.7,1.7,0,0,1,1.787,0H7.148A1.8,1.8,0,0,1,8.823,1.039l5.361,12.818a1.465,1.465,0,0,1-.2,1.477A1.864,1.864,0,0,1,12.509,16.023ZM3.574,3.2v9.614H9.931L5.91,3.2H3.574Z" transform="translate(6.409 6.409)" fill="#00ff89"/>
+        <path id="Fill_3" data-name="Fill 3" d="M42.466,28.841H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0H42.466a4,4,0,0,1,4,4V8.012h.8a4.014,4.014,0,0,1,4.009,4.009v4.8a4.013,4.013,0,0,1-4.009,4.007h-.8v4.012A4,4,0,0,1,42.466,28.841ZM4,3.2a.8.8,0,0,0-.8.8V24.841a.8.8,0,0,0,.8.795H42.466a.8.8,0,0,0,.8-.795V19.227a1.6,1.6,0,0,1,1.6-1.6h2.4a.806.806,0,0,0,.8-.806v-4.8a.805.805,0,0,0-.8-.8h-2.4a1.6,1.6,0,0,1-1.6-1.6V4a.8.8,0,0,0-.8-.8Z" transform="translate(0 0)" fill="#00ff89"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+
+
+.wimg4{
+    width:  15rem;
+    height: 10rem;
+    border-radius: 10px;
+    background-size: cover;
+}
+.card{
+    background: none!important;
+    border:none;
+}
+#videoCamPark{
+
+    max-width:100%;
+    height: auto;
+}
+.hide{
+    display: none;
+}
+.rmvbckg{
+    background: none !important;
+     
+    border-radius: 5px !important;
+   
+}
+.bg-new{
+    background:rgb(28, 34, 53);
+    color: white;
+    border-radius: 5px !important;
+    
+    
+}
+.my_scroll_div {
+    overflow-y: auto;
+    max-height: 20rem; 
+}
+
+.white-list{
+    cursor: pointer;
+}
+.black-list{
+    cursor: pointer;
+}
+.as{
+    background: transparent !important;
+    color:rgb(204, 199, 199) !important;
+
+}
+.form-label{
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
+    font-size:15px;
+   
+}

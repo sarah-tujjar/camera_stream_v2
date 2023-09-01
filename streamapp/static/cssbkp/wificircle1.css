@@ -1,0 +1,28 @@
+#circular-prgress{
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background:conic-gradient(rgb(32, 132, 54) 3.6deg, white 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#circular-prgress::before{
+
+    content:"";
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background: rgb(245, 244, 244);
+
+}
+#progress-value{
+    position: relative;
+    font-size:10px;
+    font-weight: 600;
+    color: indigo;
+
+}

@@ -1,0 +1,50 @@
+@media only screen and (max-width:450px) {
+    .qlogofor {
+        display: none !important;
+    }
+}
+
+.vmdl{
+    color: rgb(185, 194, 211);
+    font-size:13px;
+}
+.vmdlname{
+    color:rgb(165, 184, 234);
+    font-size:18px;
+}
+.vmdlname2{
+    color:rgb(165, 184, 234);
+    font-size:15px;
+}
+.vmdl2{
+    color: rgb(185, 194, 211);
+    
+}
+.wimg3{
+    width:  15rem;
+    height: 10rem;
+    border-radius: 10px;
+    background-size: cover;
+}
+#videoCamDrone{
+
+    max-width:100%;
+    height: auto;
+}
+/* .iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+} */

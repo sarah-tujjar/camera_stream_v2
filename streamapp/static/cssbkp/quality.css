@@ -1,0 +1,33 @@
+.bord-radius{
+    border-radius: 20px;
+}
+.videoCam_responsive{
+    max-width: 100%;
+    height: auto;
+}
+.vTitle{
+    color:white;
+    font-family:cabin;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.DivCol{
+    background: rgb(28, 34, 53);
+    border-radius: 10px;
+}
+.orange{
+    color: #fe9365;
+}
+.btitle{
+    color: #919aa3;
+    font-size: 14px;
+}
+.f-w-600{
+    font-weight: 600;
+    font-size:40px; 
+}
+.orange-footer{
+    background: linear-gradient(to right,#fe9365,#feb798);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

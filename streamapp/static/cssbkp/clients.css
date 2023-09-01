@@ -1,0 +1,97 @@
+.client-zone{
+    height: 90vh;
+    /* change it to 92 after complete this one */
+}
+.c-tab{
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+}
+.fas{
+    cursor: pointer;
+}
+th{
+    background: rgb(26, 187, 156) !important;
+
+}
+td{
+    padding: 0.5rem !important;
+}
+table tr:hover{
+    cursor: pointer;
+}
+table tr:nth-child(odd) td{
+    background: rgb(28, 34, 53) !important;
+    border:none !important;
+
+}
+table tr:nth-child(even) td{
+    background: rgb(31, 40, 57)  !important;
+    border:none !important;
+}
+.serachCmp{
+    padding: 0.5rem;
+    background: rgb(48, 62, 81);
+    border:none;
+}
+.serachbtn{
+    /* padding: 0.5rem; */
+    background: rgb(48, 62, 81);
+    border:none;
+    border-radius: 5px;
+}
+.serachbtn:focus{
+    background: rgb(48, 62, 81);
+    outline:none;
+    box-shadow: none !important;
+    color: white;
+}
+.chg-btn{
+    background: rgb(28, 34, 53);
+    color: white;
+    float:right;
+    margin-right: 1rem;
+}
+.chg-btn:hover{
+    background:none;
+    border:1px solid rgb(89, 87, 87);
+    color: white;
+}
+.mdlbtn{
+    background:rgb(26, 187, 156);
+}
+.mdlfld{
+    border:none;
+    background: rgb(48, 62, 81);
+}
+.mdlfld:focus{
+    background: rgb(48, 62, 81);
+    outline:none;
+    box-shadow: none !important;
+    color: white;
+}
+.lblclr{
+    color:rgb(166, 171, 174) !important;
+    font-size:1rem !important;
+}
+.btn-client{
+    background:rgb(28, 34, 53);
+    color:white !important;
+    border:none !important;
+
+}
+.btn-client:hover{
+    box-shadow: none !important;
+    border:none;
+    background: transparent !important;
+    border:1px solid rgb(166, 171, 174) !important;
+}
+input:focus{
+    background: none ipo !important;
+  }
+
+.btn-gray{
+    background:rgb(166, 171, 174);
+    color:white;
+}
+

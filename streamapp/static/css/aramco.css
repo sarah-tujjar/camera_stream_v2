@@ -1,0 +1,496 @@
+
+.headerbg{
+    background:  rgba(28, 34, 53,0.5) !important;
+}
+.alert {
+    position: fixed;
+    width: 18rem;
+    height: 4rem;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size:1rem;
+    padding-top:1.2rem;
+    background-color: white;
+    border-left: 8px solid #e60d0d !important;
+    color: #fff;
+  
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+    color: #909092;
+    align-items: center;
+  }
+  .alert img{
+    padding-right: 1rem !important;
+  }
+.riyadhLogo{
+    width: 10rem;
+    padding: 1rem;
+}
+.HideAddBtn{
+    display: none;
+}
+.HideFilterSection{
+    display: none;
+}
+.motoLogo{
+    width: 17rem;
+    padding: 1rem;
+}
+.aramcoLogo{
+    width: 13rem !important;
+    padding-top: 0.3rem !important;
+}
+.camBg{
+    background: #1C2235 !important;
+    border-radius: 12px;
+}
+.box{
+    box-sizing: border-box !important;
+    border: 5px solid transparent !important;
+    background-clip: padding-box !important;
+}
+.iconBg{
+    background-image: url('../bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 15rem; */
+}
+.mainSectionDiv{
+    background: rgba(44, 47, 103,0.5);
+    cursor: pointer;
+}
+.modelSectionDiv{
+    background: rgb(18, 21, 73);
+   
+}
+/* .mainSectionBg {
+    position: relative;
+    background: rgba(44, 47, 103, 0.5);
+    overflow: hidden;
+}
+
+.mainSectionBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgb(52, 152, 219), rgba(44, 47, 103, 0.2));
+    transition: height 0.5s ease;
+    cursor: pointer;
+} */
+
+.mainSectionBg:hover::before {
+    height: 100%;
+    cursor: pointer;
+
+}
+.mainSectionBg {
+    position: relative;
+    background: rgba(44, 47, 103, 0.5);
+    overflow: hidden;
+
+  }
+  .alert {
+    position: fixed;
+    width: 18rem;
+    height: 4rem;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size:1rem;
+    padding-top:1.2rem;
+    background-color: white;
+    border-left: 8px solid #49d761;
+    color: #fff;
+  
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+    color: #909092;
+    align-items: center;
+  }
+  
+  
+  .mainSectionBg.active::before {
+    height: 100%;
+  }
+  
+  .mainSectionBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, rgb(52, 152, 219), rgba(44, 47, 103, 0.2));
+    transition: height 0.5s ease;
+    cursor: pointer;
+  }
+.bbottom{
+    padding-bottom:1rem;
+    /* border-bottom:1px dashed #3498db; */
+    border-bottom: 0.25rem solid #31D2F2;
+}
+.w-58{
+    width: 58%;
+}
+.modelbottom{
+    padding-bottom:1rem;
+ 
+      border-bottom:1px solid rgba(9, 175, 244,0.2);
+}
+.borderBox{
+    border:1px solid rgba(9, 175, 244,0.2);
+
+}
+.service-title {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    font-family: 'Cairo', sans-serif;
+}
+.addbtn{
+    border: 2px solid transparent;
+    width:7rem;
+}
+.addbtn:hover{
+    background: none !important;
+    border:2px solid #3498db;
+    transition: background 0.3s ease;
+}
+#btnText{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.bgMain{
+    background:rgba(52, 152, 219,0.3) ;
+}
+.form-group input{
+    background:none;
+    border:none;
+    border-bottom:1px solid #3498db;
+    border-radius: 0px !important;
+    color: white !important;
+}
+input::placeholder{
+    color: rgba(182, 174, 174, 0.766) !important;
+}
+
+#searchBox:focus {
+    background:none !important;
+    /* border-bottom:1px solid #3498db; */
+}
+.InputField{
+    background: none !important;
+    color: white !important;
+    outline: none;
+
+}
+.InputField::placeholder{
+    color: rgba(182, 174, 174, 0.766) !important;
+}
+#InputField:focus {
+    color: white !important;
+    /* border-bottom:1px solid #3498db; */
+}
+.selectField{
+    background: none !important;
+    color: white !important;
+    outline: none;
+
+}
+.selectField::placeholder{
+    color: rgba(182, 174, 174, 0.766) !important;
+}
+#selectField:focus {
+    color: black !important;
+    /* border-bottom:1px solid #3498db; */
+}
+.nodisplay{
+    display: none !important;
+}
+.custom-select {
+    border:none;
+    border-bottom: 1px solid #3498db;
+    border-radius: 0px !important;
+    background-color: transparent; /* Removes the background color */
+    color: white; /* Sets the text color to white */
+
+}
+.custom-select option {
+    background: rgb(32, 36, 93); /* Sets the background color of each option to white */
+    color: rgb(255, 255, 255); /* Sets the text color of each option to black */
+}
+
+
+#videoPlayer {
+    max-width: 100%;
+    max-height: calc(100vh - 120px); /* You can adjust the value (120px) as needed to leave space for the modal header and controls */
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+  
+  /* Ensure the video doesn't exceed the modal width */
+  .modal-content {
+    overflow: hidden;
+  }
+  
+  /* Center the Video.js player horizontally */
+  .vjs-big-play-button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Additional styling for the Video.js control bar */
+  .vjs-control-bar {
+    background-color: #000; /* Customize the background color of the control bar */
+  }
+  
+  /* Adjust the font size and color of the control bar buttons */
+  .vjs-icon-placeholder:before {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #fff; /* Customize the color of the control bar buttons */
+  }
+  
+  /* Hide the large Video.js logo that appears by default */
+  .vjs-logo {
+    display: none;
+  }
+  .wlist{
+    border-bottom:5px solid greenyellow !important;
+  }
+  .notfiicationbao{
+    /* border-radius: 12px; */
+    border-bottom: 5px solid rgb(47, 255, 255) !important;
+  }
+  .blist{
+    border-bottom:5px solid rgb(220, 19, 19) !important;
+  }
+  .listbtn{
+    background-color: #141826;
+  }
+
+  .camborder{
+    background-color: #141826;
+    border-radius: 12px;
+    /* border:1px solid rgb(145, 143, 143) !important; */
+  }
+  .boxshdw :hover{
+    box-shadow: 2px 3px 20px rgba(180, 57, 67, 0.5);
+  }
+  .tablebg{
+    background: #393a52;
+  }
+  .camTitle{
+    color: #0bd1d1;
+  }
+  .bodyTitle{
+    color: #94a9c9;
+  }
+  .camHeading{
+        font-family: 'Noto Sans', sans-serif;
+        background: linear-gradient(90deg,#0ea5ea,#0bd1d1 51%,#0ea5ea) var(--x,0)/200%;
+        -webkit-background-clip: text!important;
+        -webkit-text-fill-color: transparent!important;
+        background-clip: text!important;
+        font-weight: bold !important;
+        vertical-align: baseline;
+ 
+  }
+
+  .fixed-height-div {
+    height: 320px; /* Set your desired fixed height */
+    overflow-y: scroll; /* Add vertical scrollbar when content overflows */
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: transparent transparent; /* Color of the scrollbar (thumb and track) */
+    /* For Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  /* For Webkit-based browsers (Chrome, Safari) */
+  .fixed-height-div::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+  }
+
+  .fixed-height-div::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the scrollbar thumb */
+  }
+
+  .fixed-height-div::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+  }
+
+
+  .fixed-height-divs {
+    height: 400px; /* Set your desired fixed height */
+    overflow-y: scroll; /* Add vertical scrollbar when content overflows */
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: transparent transparent; /* Color of the scrollbar (thumb and track) */
+    /* For Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  /* For Webkit-based browsers (Chrome, Safari) */
+  .fixed-height-divs::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+  }
+
+  .fixed-height-divs::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the scrollbar thumb */
+  }
+
+  .fixed-height-divs::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+  }
+  table , th , td{
+    border-bottom:1px solid rgba(151, 151, 151,0.3) !important;
+  }
+
+.accorbtn{
+  background-color: #141826 !important;
+  color: White;
+  border:none;
+}
+.accordion-item{
+  border:none !important;
+  border-bottom:1px solid rgba(151, 151, 151,0.3) !important;
+  border-radius: none !important;
+}
+hr{
+ border: 1px solid #222f43 !important;
+}
+
+
+.notifi-div {
+  height:200px; /* Set your desired fixed height */
+  overflow-y: scroll; /* Add vertical scrollbar when content overflows */
+  scrollbar-width: thin !important; /* Width of the scrollbar */
+  scrollbar-color: transparent transparent  !important; /* Color of the scrollbar (thumb and track) */
+  /* For Firefox */
+  scrollbar-width: thin  !important;
+  scrollbar-color: transparent transparent  !important;
+}
+
+/* For Webkit-based browsers (Chrome, Safari) */
+.notifi-div::-webkit-scrollbar {
+  width: 6px  !important; /* Width of the scrollbar */
+}
+
+.notifi-div::-webkit-scrollbar-thumb {
+  background-color: transparent  !important; /* Color of the scrollbar thumb */
+}
+
+.notifi-div::-webkit-scrollbar-track {
+  background-color: transparent  !important; /* Color of the scrollbar track */
+}
+
+#terminus {
+  height:500px; /* Set your desired fixed height */
+  overflow-y: scroll; /* Add vertical scrollbar when content overflows */
+  scrollbar-width: thin !important; /* Width of the scrollbar */
+  scrollbar-color: transparent transparent  !important; /* Color of the scrollbar (thumb and track) */
+  /* For Firefox */
+  scrollbar-width: thin  !important;
+  scrollbar-color: transparent transparent  !important;
+}
+
+/* For Webkit-based browsers (Chrome, Safari) */
+#terminus::-webkit-scrollbar {
+  width: 6px  !important; /* Width of the scrollbar */
+}
+
+#terminus::-webkit-scrollbar-thumb {
+  background-color: transparent  !important; /* Color of the scrollbar thumb */
+}
+
+#terminus::-webkit-scrollbar-track {
+  background-color: transparent  !important; /* Color of the scrollbar track */
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #CC0000;
+  }
+
+
+  100% {
+    background-color: #f55454;
+  }
+}
+
+.color-changing {
+  animation: colorChange 2s infinite;
+
+}
+.centered-cell {
+  vertical-align: middle;
+  text-align: center; 
+}
+tbody{
+  #terminus_tbody {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+}
+.border-bottoms{
+  border-bottom: 1px solid rgb(162, 146, 146);
+}
+
+.listborder{
+  border:1px solid #222f43;
+  border-radius: 12px;
+}
+
+#logoutBtn{
+  border:none;
+  border-bottom:2px solid red;
+  border-radius: none !important;
+}
+.wbstatus, .delemployee{
+  cursor: pointer;
+}
+.tervideo{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin:0 auto;
+}
+.visi{
+  visibility: hidden;
+}
+
+.video-container-patrol {
+  position: relative;
+  width: 340px;
+  height: 280px;
+}
+
+

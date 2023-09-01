@@ -1,0 +1,736 @@
+#cards-container::-webkit-scrollbar {
+    width:20px;
+    background-color: 0x1C2235;
+    cursor: pointer;
+}
+
+.composer-zone{
+    height:92vh;
+}
+.create-composer{
+    background: rgba(48, 62, 81,0.3);
+    height: 77vh;
+}
+#ComposerControl{
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 80.5vh;
+
+}
+#multiMedia-Zone{
+    overflow-y: auto !important;
+    overflow-x: hide !important;
+}
+#Control-config{
+    overflow-y: auto !important;
+    height: 80.5vh;
+    overflow-x: hidden;
+}
+#cards-container::-webkit-scrollbar-track {
+    box-shadow:  0 0 6px rgba(31, 40, 57, 0.3);
+  }
+
+#cards-container::-webkit-scrollbar-thumb {
+    background-color: rgba(165, 169, 176, 0.2);
+}
+#variableControler.modal-body{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#textinputControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#sensorControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#videocallControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#dancelControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#mathControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#movementControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#randomControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#stringControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#mathFormulaControler{
+    overflow-y: auto !important;
+    height: 28rem;
+}
+#preview{
+    height: 20rem;
+
+}
+.getVr{
+    padding:6.5px;
+}
+
+#mathvariable{
+    cursor:pointer;
+}
+.bg-qss2{
+    background: rgba(166, 171, 174,0.5) !important;
+}
+.border-bottom{
+    border:none !important;
+    border-bottom:1px solid rgb(42, 52, 76) !important;
+}
+
+.content-wrapper{
+    margin-top:60px;
+    /* margin-left:70px; */
+    transition: .5s;
+}
+.content-wrapper.Mainhide{
+
+    margin-left:0;
+}
+.container-fluid{
+    height: 90vh;
+    box-sizing: border-box;
+    
+    /* overflow-y: scroll;  */
+}
+.dropdown-menu.show {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 50px)
+}
+
+.working-area{
+
+    background:rgb(31, 40, 57);
+    border-radius: 15px;
+}
+.robo_info{
+    height: 55vh;
+}
+.robo_control{
+    height: 32vh;
+}
+.sct-border{
+    border-radius: 15px;
+}
+.bg-qss{
+
+    background: rgb(31, 40, 57);
+}
+.chng-robot{
+    border: none;
+    font-size: 12px;
+    background:rgb(42, 52, 76);
+    color:white;
+    border-radius: 8px;
+}
+.chng-robot:hover{
+    border:2px solid white;
+    background:none;
+    color:white;
+    border-radius: 8px;
+    font-size: 12px;
+}
+#gamepad{
+    cursor: pointer;
+}
+.circle-control{
+    display:none;
+}
+
+.sp-circle{
+    background: rgb(28, 34, 53);
+    /* padding:4.5rem 4.5rem 5rem 4.55rem; */
+    /* margin-top:2.5rem; */
+    height: 170px;
+    width: 170px;
+
+}
+
+.p-circle{
+    background: rgb(28, 34, 53);
+    /* padding:4.5rem 4.5rem 5rem 4.55rem; */
+    /* margin-top:2.5rem; */
+    height: 170px;
+    width: 170px;
+
+}
+.c-circle{
+    background: rgb(42, 52, 76);
+    height: 120px;
+    width: 120px;
+    margin-top:1.5rem;
+
+}
+.robo_chat{
+    height: 89vh;
+}
+
+
+/* Dashboard chat setting */
+.cht_txt{
+    height: 12vh;
+
+}
+.cht_txt i{
+    float: right;
+    padding-right:1rem;
+}
+.chat-data{
+    height: 69vh;
+}
+.user-data{
+    background-color: rgb(26, 187, 156);
+    border-radius: 10px;
+    color: black;
+    width:fit-content;
+    padding:1rem;
+    margin-bottom:0.5rem;
+    margin-left:0.5rem;
+
+
+}
+.send-chat{
+    height:8vh;
+    background: rgb(42, 52, 72);
+    border-bottom-left-radius:12px;
+    border-bottom-right-radius:12px;
+}
+.usr_fld{
+    border:none;
+    height: 3rem;
+    background:none;
+    border-radius: 5px;
+    color: rgb(115, 134, 155);
+}
+.usr_fld::placeholder{
+    color:rgbs(165, 169, 172,0.9);
+}
+/* ::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+
+} */
+.ics{
+    padding-left:0.5rem;
+    padding-top:1.5rem;
+    cursor: pointer;
+}
+.quick_response{
+    height:88vh;
+}
+.qp_btn{
+    background: rgb(42, 52, 76);
+    border:none;
+    color: white;
+    font-size: 15px;
+}
+.qp_btn:hover{
+    background: none;
+    border: 2px solid white;
+    color:white;
+}
+.hde{
+    display: none !important;
+}
+.swal2-modal{
+    background:rgb(28, 34, 53) !important;
+
+}
+.swal2-title{
+    color: white !important;
+}
+.noti-image{
+    border-radius: 100%;
+}
+.btr{
+    font-size: 15px;
+    color:#73879C;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: bold;
+    font-stretch: normal;
+
+    line-height: 1;
+    font-family: Baskerville Old Face;
+    /* word-spacing:3px; */
+}
+.livecamra{
+    color:#73879C;
+}
+.robo_composer{
+    height: 33vh;
+    background: rgb(31, 40, 57);
+    border-radius: 12px;
+}
+.fa-gamepad{
+    color:rgb(26, 187, 156);
+   cursor: pointer;
+   margin-left:1rem;
+}
+.fa-gamepad:hover{
+    color:white;
+
+}
+.arrc{
+    background:rgb(28, 34, 53);
+    border:2px solid rgb(56, 68, 85);
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+}
+.arrc:hover{
+    background:rgb(26, 187, 156);
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.parent-circle{
+    background: rgb(28, 34, 53);
+    height: 345px;
+    width: 345px;
+
+}
+.child-circle{
+    background: rgb(42, 52, 76);
+    height: 250px;
+    width: 250px;
+    margin-top:3rem;
+
+}
+.icon_div2{
+    background:rgb(28, 34, 53);
+    border:2px solid rgb(56, 68, 85);
+    border-radius: 10px;
+    width: 6rem;
+    height: 6rem;
+    padding-top:20px;
+}
+.icon_div2:hover{
+    background:rgb(26, 187, 156);
+}
+.icon_div{
+    background:rgb(28, 34, 53);
+    border:2px solid rgb(56, 68, 85);
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+}
+.icon-cnfg{
+
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding-top:13px;
+}
+.ster-btn{
+    color: white;
+    font-size: 15px;
+}
+.trans{
+    transition-duration: 0.5s;
+}
+.playComposer{
+    height: 5rem;
+    background: rgb(29, 37, 52);
+}
+
+#ComposerConfig .card-body{
+    background:rgb(29, 37, 52);
+    border-radius: 0 !important;
+}
+#ComposerConfig.card-body:hover{
+
+    cursor: pointer;
+}
+.compBtn{
+    color:White;
+    font-size:16px;
+    border:none;
+    background: rgb(48, 62, 81);
+    width: 100%;
+    padding:0.5rem 1rem;
+
+}
+.compBtn:hover{
+    color: white;
+}
+.compBtn i{
+    float: right;
+    margin-top:10px;
+}
+.CompIcon{
+
+    border-radius: 10px;
+    height: 4rem;
+    width: 4rem;
+    color:white;
+    border:none !important;
+}
+.CompTxt{
+
+    color: white;
+    text-align: center;
+    line-height: 2rem ;
+    font-size:15px !important;
+    font-weight: bold;
+    text-align: justify;
+    padding-top:15px;
+}
+.SpechCompIcon{
+    background:rgb(245, 130, 32);
+}
+.ifelseCompIcon{
+    background:rgb(151, 219, 79);
+}
+.loopCompIcon{
+    background:rgb(231, 43, 95);
+}
+.healthComIcon{
+    background: rgb(232, 0, 0);
+}
+.startComIcon{
+    background: rgb(57, 249, 196);
+}
+.stopComIcon{
+    background: rgb(58, 173, 2);
+}
+.pauseComIcon{
+    background: rgb(142, 39, 25);
+}
+.VoiceCompIcon{
+    background:rgb(19, 93, 119);
+}
+.voicetxt{
+    padding: top 0.5rem !important;
+}
+.waitCompIcon{
+    background:rgb(0, 131, 203);
+}
+.mqttCompIcon{
+    background:rgb(79, 85, 190);
+}
+.settingCompIcon{
+    background:rgb(0,0,0);
+}
+.variCompIcon{
+    background: rgb(48, 32, 186);
+}
+.stringCompIcon{
+    background: rgb(185, 53, 36);
+}
+.videoCompIcon{
+    background: rgb(83, 159, 59);
+}
+.apiCompIcon{
+    background: rgb(245, 176, 63);
+}
+.mathCompIcon{
+    background: rgb(110, 13, 37);
+}
+.calcCompIcon{
+    background: rgb(166, 102, 161);
+}
+.randomCompIcon{
+    background: rgb(199, 20, 47);
+}
+.multiCompIcon{
+    background: rgb(243, 211, 46);
+}
+.stopmediaCompIcon{
+    background: rgb(114, 94, 252);
+}
+.daCompIcon{
+    background: rgb(222, 38, 38);
+}
+.dwCompIcon{
+    background: rgb(0, 131, 203);
+}
+.dsCompIcon{
+    background: rgb(134, 199, 46);
+}
+.changekioskCompIcon{
+    background: #ffbf00bd;
+}
+.stopappCompIcon{
+    background:#0d6efd;
+}
+.mqttConnectCompIcon{
+    background:#0d6dfd7b;
+}
+.danceCompIcon{
+    background:#f30baaab;
+}
+.movementCompIcon{
+    background:#15e9d8b2;
+}
+.headmovementCompIcon{
+    background:#c3040474;
+}
+.poiCompIcon{
+    background:#6c6c6cab;
+}.qrcodeCompIcon{
+    background:rgb(151, 219, 79);
+}
+.sensorCompIcon{
+    background: rgb(6, 193, 230);
+}
+.faceCompIcon{
+    background: #9d0dfd;
+}
+.motiondetectionCompIcon{
+    background: rgb(6, 167, 230);
+}.textinputCompIcon{
+    background: #fd7d0d;
+}
+.textoverlayCompIcon{
+    background: #fd2d0d;
+}
+
+
+
+::-webkit-scrollbar {
+    background: rgba(115, 135, 156,0.1);
+    width: 0.5rem;
+}
+.cdesktop-config{
+    background: rgb(108, 117, 125);
+}
+.cpDiv{
+    background: rgb(48, 62, 81);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border:none !important;
+}
+.playDiv{
+    background: rgb(252, 252, 252,0.7);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border:none !important;
+    line-height: 55px;
+    padding-left:3px;
+}
+.playDiv:hover{
+
+    background: rgb(253, 253, 253);
+    color: rgb(26, 187, 156);
+    cursor: pointer;
+}
+.playModel{
+    border: 2px solid white;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 45px;
+    padding-left: 3px;
+}
+.playModel:hover{
+
+    background:rgb(48, 62, 81) !important;
+
+    color: rgb(253, 253, 253)!important;
+    cursor: pointer ;
+
+
+}
+.acceptModel{
+    background:rgb(48, 62, 81);
+    border:none;
+    color:white;
+}
+.acceptModel:hover{
+    background:none;
+    border:2px solid white !important;
+    color:white;
+    cursor: pointer;
+}
+.cpDiv:hover{
+    background: rgb(0, 0, 0);
+    color:white;
+    cursor: pointer;
+}
+.cpDiv i{
+    line-height: 3.5rem;
+    color:#73879C;
+
+}
+.cpDiv i:hover{
+
+    color:white;
+
+}
+#multimediaData img{
+    width: 3rem;
+    height: 3rem;
+    /* border-radius: 50%; */
+}
+.tool{
+    z-index: 99;
+
+}
+
+/* node styling of composer */
+.rsidediv{
+    border-top-right-radius:7px;
+    border-bottom-right-radius:7px;
+}
+.lsidediv{
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
+}
+.bg-grays{
+    background: rgb(80, 80, 80);
+}
+.bg-grays:hover{
+    background: rgb(95, 95, 95);
+    cursor: pointer;
+}
+.sidedv{
+    height: 2.5rem;
+    width: 1.5rem;
+    margin-top:0.7rem;
+
+}
+
+.inline-node { float:left; }
+
+.model-bottom{
+    border-top: 1px solid #555759;
+    justify-content: space-around;
+}
+.mdlCancel{
+    border:none;
+    color:white !important;
+    background: rgb(102, 102, 103) !important;
+}
+.mdlCancel:hover{
+    border:none;
+    color:red;
+    box-shadow: none;
+}
+.mdlPlay{
+    border-radius: 100%;
+    background:wheat;
+    color: white;
+}
+.newbtn{
+    color:white !important;
+    background:rgb(13, 94, 78)!important;
+    border:none;
+}
+.newbtn:hover{
+    cursor: pointer;
+}
+.closeVoiceCommand{
+    background: rgb(48, 62, 81) !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    padding: 6px !important;
+}
+.closeVoiceCommand:hover{
+    color:red !important;
+    cursor: pointer !important;
+}
+.v_text{
+    background: none !important;
+    border:none !important;
+    color:white !important;
+}
+.v_text .float-end{
+    cursor:pointer;
+}
+video{
+    overflow: hidden !important;
+}
+.colorfied1{
+    max-width: 10rem !important;
+}
+.colorfied2{
+    max-width: 15rem !important;
+
+}
+.sensortable th{
+
+    background: rgba(85, 87, 89,0.9) !important;
+    border-radius: 0px !important;
+    padding-right:1.3rem !important;
+}
+.sensorinfo td{
+    padding-right:2rem !important;
+}
+.danceinfo td{
+    padding-right:2rem !important;
+}
+.movementinfo td{
+    padding-right:2rem !important;
+}
+.mat{
+    margin-top:0.2rem;
+}
+.bg-none{
+    background: none !important;
+}
+.accordion-button:focus{
+    box-shadow: none !important;
+}
+.qss-border{
+    border-bottom: 2px solid rgb(85 87 91);
+}
+.targetValue input[type=radio]:hover{
+    cursor: pointer;
+
+}
+.vdoValues:hover{
+    cursor: pointer;
+    background: rgba(31, 40, 57,0.6);
+    border:none;
+    transition: 0.4s;
+}
+.ftnvalue:hover{
+    cursor: pointer;
+    background: rgba(95, 95, 95,0.5);
+    border:none;
+
+}
+.fnt{
+    font-size: 14px;
+}
+.formulabg{
+    background: rgb(48, 62, 81) !important;
+}
+.acrd{
+    padding:0 !important;
+}
+.bg-qss3{
+    background: rgb(70 70 72 / 79%) !important;
+}

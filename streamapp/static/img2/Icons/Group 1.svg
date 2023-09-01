@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="64" viewBox="0 0 63 64">
+  <g id="Group_1" data-name="Group 1" transform="translate(-0.269 -0.007)">
+    <ellipse id="pin-bg_copy_3" data-name="pin-bg copy 3" cx="31.5" cy="32" rx="31.5" ry="32" transform="translate(0.269 0.007)" fill="#ffd242" opacity="0.2"/>
+    <g id="Group_6" data-name="Group 6" transform="translate(14.356 13.331)">
+      <g id="Group_5_Copy" data-name="Group 5 Copy">
+        <g id="addspot-action_copy" data-name="addspot-action copy">
+          <circle id="bg" cx="18" cy="18" r="18" transform="translate(-0.087 -0.324)" fill="#f1f1f1"/>
+        </g>
+      </g>
+      <path id="Fill_1" data-name="Fill 1" d="M2.692,0A.724.724,0,0,0,2.1.626L.022,10.671a.683.683,0,0,0,.39.857l3.352.737L1.71,23.407,9.363,11.5,4.987,9.669,6.652,1.629a.7.7,0,0,0-.4-.866L2.8.009A.368.368,0,0,0,2.692,0Z" transform="translate(14.356 6.153)" fill="#ffd242"/>
+    </g>
+  </g>
+</svg>

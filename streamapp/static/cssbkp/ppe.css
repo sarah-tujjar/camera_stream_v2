@@ -1,0 +1,38 @@
+.bord-radius{
+    border-radius: 20px;
+}
+.videoCam_responsive{
+    max-width: 100%;
+    height: auto;
+}
+.vTitle{
+    color:white;
+    font-family:cabin;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.DivCols{
+    background: rgb(28, 34, 53);
+     
+
+}
+.brdright{
+    border-right:1px dashed rgb(11, 67, 91);
+}
+.cnt{
+    border-bottom: 2px solid white;
+}
+
+.rad-left{
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+.rad-right{
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+.box{
+    box-sizing: border-box !important;
+    border: 5px solid transparent !important;
+    background-clip:padding-box !important;
+  }

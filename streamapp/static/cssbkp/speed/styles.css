@@ -1,0 +1,10 @@
+.speedo {
+
+    /* box-shadow: 4px 4px 100px rgba(89, 113, 232); */
+   
+}
+canvas{
+    background: radial-gradient(rgb(28, 34, 53), rgb(39, 43, 62)) !important;
+    padding:10px;
+}
+

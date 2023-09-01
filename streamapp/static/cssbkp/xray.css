@@ -1,0 +1,99 @@
+.demo-img{
+    /* box-shadow:8px 8px 32px rgba(9, 70, 163,0.3); */
+    border-radius: 10px;
+}
+.btn-qss{
+    background: rgb(28, 34, 53);
+    color:white;
+    border-radius: 10px;
+     border:0.5px solid rgb(42, 42, 52) 
+}
+.btn-qss:hover{
+    background: none;
+    border:1px solid white;
+    color:white;
+    border-radius: 10px;
+}
+.card{
+    background: none !important;
+    border:none !important;
+    align-items: center;
+}
+.xborder{
+    /* border:1px solid gray; */
+    border-radius: 12px;
+}
+.xray_demo:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 32px rgb(28, 34, 53);
+}
+.nobg-img img{
+    border-radius: 15px;
+}
+.Demo-Title{
+    color: white !important;
+}
+.Demo-Div{
+    border:1px dashed gray;
+    border-radius: 12px;
+    /* background: rgb(120, 131, 137); */
+}
+.card-img-rad{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.img-array{
+   
+    height: 30rem;
+    background: rgb(28, 34, 53);
+    border-radius: 10px;
+    overflow:scroll;
+} 
+.img-center{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.intro-Div{
+    background-image: url('/frontend/assets/img/xray.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.mtitle{
+    color:rgb(221, 222, 224);
+    font-family: Merriweather;
+}
+.Title{
+
+    font-weight:bold;
+    color: #f0e6e6;
+    font-size: 45px;
+    font-family: Oswald;
+    word-spacing: 8px;
+}
+.para{
+    color:rgb(226, 228, 230);
+    font-family: Roboto Slab;
+    font-size: 16px;
+}
+.TitleDiv{
+    background: rgba(28, 34, 53,0.4);
+    border-radius: 10px;
+}
+.contct-btn{
+    color: white;
+}
+.contct-btn:hover{
+    color: white;
+}
+.box{
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    background-clip: padding-box;
+}

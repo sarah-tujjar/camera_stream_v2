@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/static/qss.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/sass.css" />
+    <link rel="stylesheet" href="/static/css/layets.css" />
+    <link rel="stylesheet" href="/static/css/lightbox.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+    <link rel="stylesheet" href="/static/css/aramco.css" />
+
+    <title>Aramco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    {% csrf_token %}
+    <style>
+      #video-container {
+        position: relative;
+        display: inline-block;
+      }
+
+
+      #video-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- White Model start -->
+    <div
+      class="modal fade"
+      id="sectionModal"
+      tabindex="-1"
+      aria-labelledby="sectionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modelSectionDiv">
+          <div class="modal-header" style="border: none !important">
+            <h5 class="modal-title" id="sectionModalLabel">White List</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <!-- sectionMang panel  -->
+                <div class="col-md-12 col-lg-12 col-xl-12" id="SecMang">
+                  <div class="row pt-2 d-flex justify-content-center">
+                    <h5 class="text-center service-title py-4">
+                      WhiteList Management
+                    </h5>
+                    <form
+                      id="employee-form"
+                      method="post"
+                      enctype="multipart/form-data"
+                    >
+                      {% csrf_token %}
+                      <div class="mb-3 col-xl-7 col-md-7 col-lg-7">
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Name"
+                          class="form-control InputField"
+                        />
+                      </div>
+                      <!-- <div class="mb-3 col-xl-7 col-md-7 col-lg-7"> 
+                            <input type="text" id="status" name="status" placeholder="Status" value="" class="form-control InputField">
+                        </div> -->
+                      <div class="my-3 col-xl-7 col-md-7 col-lg-7 py-4">
+                        <div class="input-group mb-3">
+                          <input
+                            type="file"
+                            id="image"
+                            name="image"
+                            accept="image/*"
+                            class="form-control InputField"
+                            placeholder=".Jpg, .Png, .Gif"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3 col-xl-7 col-md-7 col-lg-7">
+                        <button
+                          type="button"
+                          id="upload-button"
+                          class="btn btn-success float-end"
+                        >
+                          Upload
+                        </button>
+                      </div>
+                    </form>
+                    <div id="response-message"></div>
+                  </div>
+                </div>
+                <!-- sectionMang panel end -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- White Model End -->
+
+    <!-- Black Model start -->
+    <div
+      class="modal fade"
+      id="sectionblackModal"
+      tabindex="-1"
+      aria-labelledby="sectionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modelSectionDiv">
+          <div class="modal-header" style="border: none !important">
+            <h5 class="modal-title" id="sectionModalLabel">Black List</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <!-- blacklist panel  -->
+                <div class="col-md-12 col-lg-12 col-xl-12" id="SecMang">
+                  <div class="row pt-2 d-flex justify-content-center">
+                    <h5 class="text-center service-title py-4">
+                      BlackList Management
+                    </h5>
+                    <form
+                      id="employee-form"
+                      method="post"
+                      enctype="multipart/form-data"
+                    >
+                      {% csrf_token %}
+                      <div class="mb-3 col-xl-7 col-md-7 col-lg-7">
+                        <input
+                          type="text"
+                          id="bname"
+                          name="bname"
+                          placeholder="Name"
+                          class="form-control InputField"
+                        />
+                      </div>
+                      <!-- <div class="mb-3 col-xl-7 col-md-7 col-lg-7"> 
+                            <input type="text" id="status" name="status" placeholder="Status" value="" class="form-control InputField">
+                        </div> -->
+                      <div class="my-3 col-xl-7 col-md-7 col-lg-7 py-4">
+                        <div class="input-group mb-3">
+                          <input
+                            type="file"
+                            id="bimage"
+                            name="bimage"
+                            accept="image/*"
+                            class="form-control InputField"
+                            placeholder=".Jpg, .Png, .Gif"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3 col-xl-7 col-md-7 col-lg-7">
+                        <button
+                          type="button"
+                          id="black-button"
+                          class="btn btn-success float-end"
+                        >
+                          Upload
+                        </button>
+                      </div>
+                    </form>
+                    <div id="blacklist-message"></div>
+                  </div>
+                </div>
+                <!-- blacklist panel end -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Black Model End -->
+
+    <!-- whiteblack  Model start -->
+    <div
+      class="modal fade"
+      id="whiteblackModal"
+      tabindex="-1"
+      aria-labelledby="sectionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modelSectionDiv">
+          <div class="modal-header" style="border: none !important">
+            <h5 class="modal-title" id="sectionModalLabel">List Management</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <!-- whiteblacklist panel start -->
+                <div class="col-md-12 col-lg-12 col-xl-12" id="SecMang">
+                  <div class="row pt-2 d-flex justify-content-center">
+                    <h5 class="text-center service-title py-1">White-Black</h5>
+                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12">
+                      <div class="row">
+                        <div
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                          id="blackwhitelist"
+                          style="min-height: 250px; overflow-y: scroll"
+                        >
+                          <table class="table">
+                            <thead class="camTitle text-center">
+                              <tr>
+                                <th scope="col">Sr.No</th>
+                                <th scope="col">Avatar</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Delete</th>
+                              </tr>
+                            </thead>
+                            <tbody
+                              class="bodyTitle"
+                              id="whiteblack_table"
+                            ></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- whiteblacklist panel end -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- whiteblack Model End -->
+
+    <div id="alertContainer"></div>
+
+    <div class="content-wrapper">
+      <section class="dashboard-top-sec">
+        <div class="container-fluid">
+          <!-- firs row start -->
+          <div class="row">
+            <!-- header start -->
+            <div class="col-md-12 col-lg-12 col-xl-12 headerbg shadow-lg">
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img src="/static/qss/moto.png" alt="" class="motoLogo" />
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <img
+                    src="/static/qss/aramco.png"
+                    alt=""
+                    class="float-end aramcoLogo"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- header end -->
+
+            <!-- mainSection start -->
+            <div class="col-md-12 col-lg-12 col-xl-12">
+              <div class="row">
+                <!-- Robot 1 start -->
+                <div
+                  class="col-md-5 col-lg-5 col-xl-5 col-sm-12 box camBg"
+                  id="Robots_divs"
+                >
+                  <div class="row box">
+                    <!-- orient streaming start -->
+                    <div
+                      class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                      id="orionstartHeight"
+                    >
+                      <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                          <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <h5 class="text-white py-2 camHeading">
+                                OrionStar
+                              </h5>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <button
+                                id="playAudioButton"
+                                style="visibility: hidden"
+                                data-audio-url="{% url 'play_audio' %}"
+                              ></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 camborder p-2"
+                          id="ofront"
+                        >
+                          <div class="row">
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+                             
+                              <div
+                                class="embed-responsive embed-responsive-16by9"
+                              >
+                                <video
+                                  id="video"
+                                  autoplay
+                                  poster="data:image/gif,AAAA"
+                                  class="embed-responsive-item tervideo"
+                                  width="340"
+                                  height="280"
+                                ></video>
+                         
+                                <canvas
+                                  id="video-canvas"
+                                  class="tervideo visi"
+                                  width="340"
+                                  height="280"
+                                ></canvas>
+                              </div>
+                            </div>
+                            <div
+                              class="col-xl-3 col-lg-3 col-md-3 col-sm-12"
+                              id="orion_data"
+                            >
+                              <h6 class="camTitle pt-3">
+                                <img src="/static/time.png" alt="" /> :<span
+                                  class="text-white"
+                                  id="date"
+                                ></span>
+                              </h6>
+                              <h6 class="camTitle pt-3">
+                                <img src="/static/date.png" alt="" /> :<span
+                                  class="text-white"
+                                  id="time"
+                                ></span>
+                              </h6>
+                          
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- orient streaming start -->
+                    <!-- terminus streaming start -->
+                    <!-- Robot 2 start -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 camBg">
+                      <div class="row">
+                        <!-- terminus streaming start -->
+                        <div
+                          class="col-xl-12 col-lg-12 col-md-12 col-sm-12 box"
+                          id="terminusHeight"
+                        >
+                          <h5 class="text-white py-3 camHeading">Patrol</h5>
+                          <div class="row">
+                            <!-- cam-1 start -->
+                            <div
+                              class="col-xl-6 col-lg-6 col-md-6 col-sm-6 camborder box"
+                              id="tfront"
+                            >
+                              <h6 class="py-2 camTitle">Front</h6>
+                              <div class="row">
+                                <div
+                                  class="col-lg-12 col-md-12 col-xl-12 col-sm-12 pb-2 boxshdw"
+                                  id="video-container"
+                                >
+                                  <video
+                                    id="frontVideo"
+                                    width="340"
+                                    height="280"
+                                    preload="auto"
+                                    muted
+                                    autoplay
+                                  ></video>
+                                  <canvas
+                                    id="frontvideo-canvas"
+                                    class="visi"
+                                    width="340"
+                                    height="280"
+                                    style="
+                                      position: absolute;
+                                      top: 0;
+                                      left: 0;
+                                      z-index: 1;
+                                    "
+                                  ></canvas>
+
+                                </div>
+                              </div>
+                            </div>
+                            <!-- cam-1 end -->
+                     
+                            <!-- cam-2 start -->
+                            <div
+                              class="col-xl-6 col-lg-6 col-md-6 col-sm-6 camborder box"
+                              id="tback"
+                            >
+                              <h6 class="py-2 camTitle">Back</h6>
+                              <div class="row">
+                                <div
+                                class="col-lg-12 col-md-12 col-xl-12 col-sm-12 pb-2 boxshdw"
+                                id="video-container"
+                              >
+                              <video
+                              id="backVideo"
+                              width="340"
+                              height="280"
+                              preload="auto"
+                              muted
+                              autoplay
+                            ></video>
+                                  <canvas
+                                    id="backvideo-canvas"
+                                    class="visi"
+                                    width="340"
+                                    height="280"
+                                    style="
+                                      position: absolute;
+                                      top: 0;
+                                      left: 0;
+                                      z-index: 1;
+                                    "
+                                  ></canvas>
+                                 
+                                </div>
+                              </div>
+                            </div>
+                            <!-- cam-2 end -->
+                          </div>
+                          <div class="row box">
+                            <!-- cam-3 start -->
+                            <div
+                              class="col-xl-6 col-lg-6 col-md-6 col-sm-6 camborder box"
+                              id="tleft"
+                            >
+                              <h6 class="py-2 camTitle">Left</h6>
+                              <div class="row">
+                                <div
+                                  class="col-lg-12 col-md-12 col-xl-12 col-sm-12 pb-2"
+                                  id="video-container"
+                                >
+                                  <video
+                                    id="leftVideo"
+                                    width="340"
+                                    height="280"
+                                    preload="auto"
+                                    muted
+                                    autoplay
+                                  ></video>
+                                  <canvas
+                                    id="leftvideo-canvas"
+                                    class="visi"
+                                    width="340"
+                                    height="280"
+                                    style="
+                                      position: absolute;
+                                      top: 0;
+                                      left: 0;
+                                      z-index: 1;
+                                    "
+                                  >
+                                  </canvas>
+                               
+                                </div>
+                              </div>
+                            </div>
+                            <!-- cam-3 end -->
+                            <!-- cam-4 start -->
+                            <div
+                              class="col-xl-6 col-lg-6 col-md-6 col-sm-6 camborder box"
+                              id="tright"
+                            >
+                              <h6 class="py-2 camTitle">Right</h6>
+                              <div class="row">
+                                <div
+                                  class="col-lg-12 col-md-12 col-xl-12 col-sm-12 pb-2"
+                                  id="video-container"
+                                >
+                                  <video
+                                    id="rightVideo"
+                                    width="340"
+                                    height="280"
+                                    preload="auto"
+                                    muted
+                                    autoplay
+                                  ></video>
+                                  <canvas
+                                    id="rightvideo-canvas"
+                                    class="visi"
+                                    width="340"
+                                    height="280"
+                                    style="
+                                      position: absolute;
+                                      top: 0;
+                                      left: 0;
+                                      z-index: 1;
+                                    "
+                                  ></canvas>
+                              
+                                </div>
+                              </div>
+                            </div>
+                            <!-- cam-4 end -->
+                          </div>
+                        </div>
+                        <!-- terminus streaming start -->
+                      </div>
+                    </div>
+                    <!-- Robot 2 end -->
+
+                    <!-- terminus streaming start -->
+                  </div>
+                </div>
+                <!-- Robot1 end  -->
+
+                <!-- Log secrion start -->
+                <div class="col-md-7 col-lg-7 col-xl-7 box camBg border">
+                  <div class="row">
+                    <!-- black white div start -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-23">
+                      <!-- r1 start -->
+                      <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                          <div class="row">
+                            <div
+                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                            >
+                              <div class="row">
+                                <div
+                                  class="col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                                >
+                                  <h5 class="text-white py-2 camHeading">
+                                    List Panel
+                                  </h5>
+                                </div>
+                                <div
+                                  class="col-xl-6 col-lg-6 col-md-6 col-sm-12"
+                                >
+                                  <button
+                                    id="fullscreenBtn"
+                                    class="btn text-white float-end"
+                                  >
+                                    <img
+                                      src="/static/qss/maximize.png"
+                                      alt="Full-Screen"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- white  start-->
+                        <div
+                          class="col-xl-12 col-lg-12 col-lg-12 col-sm-12 camborder box"
+                          data-bs-toggle="modal"
+                          data-bs-target="#sectionModal"
+                        >
+                          <div class="row listborder p-3">
+                            <div class="col-md-4 col-lg-4 col-xl-4 wlist">
+                              <img
+                                src="/static/qss/white.png"
+                                alt=""
+                                class="w-50 ms-3"
+                              />
+                            </div>
+                            <div
+                              class="col-md-8 col-lg-8 col-xl-8 text-center p-3 wlist"
+                            >
+                              <h6 class="fw-bold bodyTitle pt-2">White-List</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- white end -->
+                        <!-- black start -->
+                        <div
+                          class="col-xl-12 col-lg-12 col-lg-12 col-sm-12 camborder box"
+                          data-bs-toggle="modal"
+                          data-bs-target="#sectionblackModal"
+                        >
+                          <div class="row listborder p-3">
+                            <div class="col-md-4 col-lg-4 col-xl-4 blist">
+                              <img
+                                src="/static/qss/black.png"
+                                alt=""
+                                class="w-50 ms-3"
+                              />
+                            </div>
+                            <div
+                              class="col-md-8 col-lg-8 col-xl-8 text-center p-3 blist"
+                            >
+                              <h6 class="fw-bold bodyTitle pt-2">Black-List</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- black end -->
+                        <!-- list btn start -->
+                        <div class="col-xl-12 col-lg-12 col-lg-12 col-sm-12">
+                          <div class="d-grid gap-2 col-12 mx-auto">
+                            <button
+                              class="btn listbtn text-white"
+                              type="button"
+                              id="wblist"
+                              data-bs-toggle="modal"
+                              data-bs-target="#whiteblackModal"
+                            >
+                              List Management
+                            </button>
+                          </div>
+                        </div>
+                        <!-- list btn end -->
+                      </div>
+                      <!-- r1 end -->
+                    </div>
+                    <!-- black white div end -->
+                    <!-- notification div strt -->
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-23 box camBg">
+                      <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                          <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <h5 class="text-white py-2 camHeading">
+                                Notification Panel
+                              </h5>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                              <button
+                                id="logoutBtn"
+                                class="btn logoutBtn text-white float-end"
+                              >
+                                Logout
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-md-12 col-lg-12 col-xl-12 p-3 notfiicationbao"
+                      >
+                        <div class="row">
+                          <div
+                            class="col-md-12 col-lg-12 col-xl-12 camborder notifi-div"
+                            id="notificPanel"
+                          >
+                            <p class="bodyTitle border-bottoms p-3">
+                              Person detection her at 23:45 PM 5-2-2023
+                            </p>
+                            <p class="bodyTitle border-bottoms p-3">
+                              Person detection her at 23:45 PM 5-2-2023
+                            </p>
+                            <p class="bodyTitle border-bottoms p-3">
+                              Person detection her at 23:45 PM 5-2-2023
+                            </p>
+                            <p class="bodyTitle border-bottoms p-3">
+                              Person detection her at 23:45 PM 5-2-2023
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- notification div end -->
+                    <!-- long logs start -->
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                      <!-- t start -->
+                      <div
+                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 camBg box"
+                      >
+                        <div class="row">
+                          <h5 class="text-white py-3 camHeading">Log Panel</h5>
+                          <div class="row">
+                            <!-- terminus data start -->
+                            <div
+                              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 Terminus"
+                            >
+                              <h6 class="py-2 camTitle">Patrol/Orient</h6>
+                              <div class="row">
+                                <div
+                                  class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                                  id="terminus"
+                                >
+                                  <table class="table camborder">
+                                    <thead class="camTitle text-center">
+                                      <tr>
+                                        <th scope="col">Sr.No</th>
+                                        <th scope="col">Avatar</th>
+                                        <th scope="col">Robot</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Date</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody
+                                      class="bodyTitle fw-bold"
+                                      id="terminus_table"
+                                    ></tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- terminus data end -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- t end -->
+                    </div>
+                    <!-- long logs end -->
+                  </div>
+                </div>
+                <!-- Log secrion end -->
+              </div>
+            </div>
+            <!-- mainsection end -->
+          </div>
+          <!-- first row end -->
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <!-- <script src="/static/js/fullscreen.js" ></script> -->
+  <script src="/static/js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      getLogsdata();
+
+      $("#fullscreenBtn").on("click", () => {
+        toggleFullscreen();
+      });
+      $("#logoutBtn").on("click", () => {
+        logout();
+        // readSarafile();
+      });
+      $("#wblist").on("click", () => {
+        getlistdata();
+        // readSarafile();
+      });
+      $(document).on("click", ".wbstatus", (event) => {
+        const id = $(event.currentTarget).attr("id");
+        const status = $(event.currentTarget).text().trim(); // Get the current status
+        const newStatus = status === "white" ? "black" : "white"; // Toggle the status
+        const confirmed = window.confirm(
+          `Are you sure you want to change the status to ${newStatus}?`
+        );
+
+        if (confirmed) {
+          const csrfToken = document
+            .getElementById("csrf-token")
+            .getAttribute("data-csrf");
+          const urlWithTrailingSlash = `/updwbstatus/${id}/`; // Note the trailing slash
+
+          fetch(urlWithTrailingSlash, {
+            method: "POST",
+            headers: {
+              "X-CSRFToken": csrfToken,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ newStatus }), // Send the new status in the request body
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // console.log(data.message);
+              getlistdata();
+            })
+            .catch((error) => {
+              console.error("Error updating employee status:", error);
+            });
+        }
+      });
+
+      $(document).on("click", ".delemployee", (event) => {
+        const id = $(event.currentTarget).attr("id");
+        // console.log(id);
+        const confirmed = window.confirm("Are you sure you want to Delete ?");
+        if (confirmed) {
+          const csrfToken = document
+            .getElementById("csrf-token")
+            .getAttribute("data-csrf");
+          fetch(`/delemp/${id}`, {
+            method: "DELETE",
+            headers: {
+              "X-CSRFToken": csrfToken,
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // console.log(data.message);
+              getlistdata();
+            })
+            .catch((error) => {
+              console.error("Error deleting employee:", error);
+            });
+        }
+      });
+    });
+    function toggleFullscreen() {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        document.documentElement.requestFullscreen();
+      }
+    }
+  </script>
+  <script
+    id="csrf-token"
+    type="text/plain"
+    data-csrf="{{ csrf_token }}"
+  ></script>
+  <script>
+    var myGlobalVar = 0;
+    console.log(myGlobalVar);
+    // Get the CSRF token from the cookie
+    function getCookie(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== "") {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === name + "=") {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+
+    $(document).ready(function () {
+      $(document).on("click", ".logimgs", (event) => {
+        alert();
+        let imageUrl = $(event.currentTarget).attr("src");
+
+        let hiddenLink = document.getElementById("hiddenLink");
+        hiddenLink.href = imageUrl;
+        hiddenLink.click();
+      });
+      $(".aramcoLogo").on("click", () => {
+        // logout();
+        readSarafile();
+      });
+      // white list data upload start
+      $("#upload-button").click(function () {
+        myGlobalVar = 1;
+        console.log("saraaaaah", myGlobalVar);
+        const formData = new FormData();
+        formData.append("name", document.getElementById("name").value);
+        formData.append("status", "white");
+        formData.append("image", document.getElementById("image").files[0]);
+        var csrfToken = $('input[name="csrfmiddlewaretoken"]').val(); // Get the CSRF token
+        formData.append("csrfmiddlewaretoken", csrfToken); // Append CSRF token to the form data
+        var url = "/uploadEmployee/"; // Define the URL directly
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function (response) {
+            // console.log(response)
+            $("#response-message").text(response.message); // Display the response message
+            if (response.message != "Name already exists."){
+            setTimeout(function () {
+              $("#name").val("");
+              $("#image").val("");
+              $("#response-message").text("");
+              $("#sectionModal").modal("hide");
+            }, 3000);
+            myGlobalVar = 0;
+            console.log(myGlobalVar);
+          }},
+        });
+      });
+
+      // white list data upload end
+
+      // black list data upload start
+      $("#black-button").click(function () {
+        myGlobalVar = 1;
+        console.log("saraaaaah", myGlobalVar);
+        const formData = new FormData();
+        formData.append("name", document.getElementById("bname").value);
+        formData.append("status", "black");
+        formData.append("image", document.getElementById("bimage").files[0]);
+        var csrfToken = $('input[name="csrfmiddlewaretoken"]').val(); // Get the CSRF token
+        formData.append("csrfmiddlewaretoken", csrfToken); // Append CSRF token to the form data
+        var url = "/uploadBlack/"; // Define the URL directly
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function (response) {
+            // window.myGlobalVar = 1
+            // console.log(window.myGlobalVar)
+            $("#blacklist-message").text(response.message); // Display the response message
+            if (response.message != "Name already exists."){
+            setTimeout(function () {
+              $("#bname").val("");
+              $("#bimage").val("");
+              $("#blacklist-message").text("");
+              $("#sectionblackModal").modal("hide");
+            }, 3000);
+            myGlobalVar = 0;
+            console.log(myGlobalVar);
+          }},
+        });
+      });
+
+      // black list data upload end
+      let video = document.getElementById("video");
+      let frontvideo = document.getElementById("frontVideo");
+      let backvideo = document.getElementById("backVideo");
+      let leftvideo = document.getElementById("leftVideo");
+      let rightvideo = document.getElementById("rightVideo");
+
+      let videoCanvas = document.getElementById("video-canvas");
+      let front_canvas = document.getElementById("frontvideo-canvas");
+      let back_canvas = document.getElementById("backvideo-canvas");
+      let left_canvas = document.getElementById("leftvideo-canvas");
+      let right_canvas = document.getElementById("rightvideo-canvas");
+
+      let videoContext = videoCanvas.getContext("2d");
+      let frontvideoContext = front_canvas.getContext("2d");
+      let backvideoContext = back_canvas.getContext("2d");
+      let leftvideoContext = left_canvas.getContext("2d");
+      let rightvideoContext = right_canvas.getContext("2d");
+
+      setInterval(function () {
+        if (myGlobalVar === 0) {
+          console.log("changed to 0");
+          animate();
+        } else {
+          console.log("changed to 1");
+        }
+      }, 1300);
+
+      
+      function animate() {
+        videoContext.drawImage(
+          video,
+          0,
+          0,
+          videoCanvas.width,
+          videoCanvas.height
+        );
+        frontvideoContext.drawImage(
+          frontvideo,
+          0,
+          0,
+          front_canvas.width,
+          front_canvas.height
+        );
+        backvideoContext.drawImage(
+          backvideo,
+          0,
+          0,
+          back_canvas.width,
+          back_canvas.height
+        );
+        leftvideoContext.drawImage(
+          leftvideo,
+          0,
+          0,
+          left_canvas.width,
+          left_canvas.height
+        );
+        rightvideoContext.drawImage(
+          rightvideo,
+          0,
+          0,
+          right_canvas.width,
+          right_canvas.height
+        );
+        let dataURL = videoCanvas.toDataURL("image/jpeg");
+        let frontdataURL = front_canvas.toDataURL("image/jpeg");
+        let backdataURL = back_canvas.toDataURL("image/jpeg");
+        let leftdataURL = left_canvas.toDataURL("image/jpeg");
+        let rightdataURL = right_canvas.toDataURL("image/jpeg");
+        patrol_list = [
+          backdataURL,
+          leftdataURL,
+          rightdataURL,
+          frontdataURL,
+          dataURL,
+        ];
+        $.ajax({
+          type: "POST",
+          url: "/patrol/",
+          data: {
+            "frame[]": patrol_list,
+          },
+          beforeSend: (xhr) => {
+            // Include the CSRF token in the request headers
+            xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+          },
+          success: (response) => {
+            // Process the response and draw the squares
+            // Check if detected_objects is present in the response
+    if (response && response.detected_objects) {
+        let item = response.detected_objects;
+        
+        // Further checks can be made for each property if needed
+        if (item.robot && item.cam && item.status && item.time && item.date) {
+            appendAndScroll(
+              item.robot,
+              item.cam,
+              item.status,
+              item.time,
+              item.date
+            );
+            appendTableRow(
+              item.robot,
+              item.image,
+              item.dstatus,
+              item.status,
+              item.time,
+              item.date
+            );
+            saveLogsToDatabase(
+              item.robot,
+              item.cam,
+              item.image,
+              item.status,
+              item.time,
+              item.date
+            );
+            
+            videoCanvas.style.display = "none";
+        } else {
+            console.error("One or more required properties are missing from detected_objects");
+        }}
+    }
+         
+        });
+      }
+    });
+  </script>
+
+  <script src="/static/js/jquery-ui.js"></script>
+  <script src="/static/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/bootstrap-show-modal.js"></script>
+  <script src="/static/js/lightbox-plus-jquery.min.js"></script>
+  <script src="/static/js/aramco.js"></script>
+  <script src="/static/js/uploadData.js"></script>
+  <script src="/static/js/readjson.js"></script>
+  <script src="/static/js/copydata.js"></script>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="/static/js/new_orien.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flv.js@latest"></script>
+  <script src="/static/js/patrol.js"></script>
+  <script src="/static/js/audio.js"></script>
+</html> 

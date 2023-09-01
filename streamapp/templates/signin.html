@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/static/qss.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/signin.css" />
+
+
+    <title>Aramco::Signin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <div class="container ">
+        <div class="wrapper">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-4 text-center ">
+              <img src="/static/qss/mco.png" alt="" class=" rounded w-75">
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-4">
+            <div class="row pt-1">
+              <form id="employee-form" method="post" class="pt-4 " enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="text" id="email" name="email" placeholder="xyz@qltyss.com"  class="form-control InputField" required>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 py-4">
+                  <label for="exampleFormControlInput1" class="form-label">Password</label>
+                  <input type="password" id="pass" name="pass"  class="form-control InputField" placeholder="************" required>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-grid p-3 button">
+                  <input type="button" value="Login" id="signin-button" class="btn btn-success">
+                </div>
+                
+              </form>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                <img src="/static/qss/qss_logo.png" alt="" class=" rounded w-75">
+              </div>
+            </div>
+          </div>
+          <!-- <form id="employee-form" method="post" class="pt-4 " enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <i class="fas fa-user"></i>
+         
+                    <input type="text" id="email" name="email" placeholder="xyz@gmail.com"  class="form-control InputField" required>
+                </div>
+             
+            </div>
+            <div class="row ">
+                <div class="col-lg-12">
+                    <i class="fas fa-lock"></i>
+             
+                    <input type="password" id="pass" name="pass"  class="form-control InputField" placeholder="************" required>
+                </div>
+              
+            </div>
+       
+            <div class="row button">
+                <div class="col-lg-12">
+                    <input type="button" value="Login" id="signin-button" class="btn btn-success float-end">
+                </div>
+             
+              
+            </div>
+        
+            <div class="signup-link text-danger" id="response-message"></div>
+          </form> -->
+        </div>
+      </div>
+                      
+</body>
+<script src="/static/js/jquery.min.js" ></script>
+<script src="/static/js/jquery-ui.js"></script>
+<script src="/static/js/bootstrap/bootstrap.bundle.min.js" ></script>
+<script src="/static/js/bootstrap-show-modal.js"></script>
+<script src="/static/js/lightbox-plus-jquery.min.js" ></script>
+<script src="/static/js/aramco.js" ></script>
+<script src="/static/js/uploadData.js" ></script>
+<script src="/static/js/readjson.js" ></script>
+<script src="/static/js/copydata.js" ></script>
+</html>
+
+
+
+<!-- signin panel  -->
+<!-- <div class="col-md-12 col-lg-12 col-xl-12 " id="signin">
+                    
+    <div class="row pt-2 d-flex justify-content-center">
+      <h5 class="text-center service-title py-4">signin Management</h5>
+      <form id="employee-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3 col-xl-7 col-md-7 col-lg-7"> 
+            <input type="text" id="email" name="email" placeholder="xyz@gmail.com"  class="form-control InputField">
+        </div>
+      
+        <div class="my-3 col-xl-7 col-md-7 col-lg-7 py-4">                    
+            <div class="input-group mb-3">
+                <input type="password" id="pass" name="pass"  class="form-control InputField" placeholder="************">
+              
+            </div>
+        </div>
+        <div class="mb-3 col-xl-7 col-md-7 col-lg-7 ">
+            <button type="button" id="signin-button" class="btn btn-success float-end">Signin</button>
+        </div>
+       
+      
+    </form>
+    <div id="response-message" class="text-white"></div>
+    </div>
+  </div> -->
+  <!-- signin panel end -->

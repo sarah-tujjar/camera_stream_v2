@@ -1,0 +1,81 @@
+.mcity{
+    /* background: rgba(255,255,255, 0.3); */
+    /* height: 675px; */
+    border-radius: 15px;
+}
+.modal-title{
+    color:rgb(250, 250, 250);
+    font-weight: bold !important;
+    font-size: 14px;
+
+}
+.citybck{
+    border-radius: 12px;
+    background: rgba(46, 49, 68,0.6);
+    /* border:1px solid rgba(58, 35, 139, 0.6); */
+}
+.sub-section{
+    background: rgba(46, 49, 68, 0.75);
+    border-radius: 10px;
+}
+.hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(248, 246, 246, 0), rgba(46, 49, 68, 0.75), rgba(0, 0, 0, 0));
+}
+.hr2{
+    border: 0 !important;
+    height: 0.5px  !important;
+    background-image: linear-gradient(to right, rgba(248, 246, 246, 0), rgba(46, 49, 68, 0.75), rgba(0, 0, 0, 0))  !important;   
+}
+.hotspot{
+    line-height: 4rem;
+}
+.lnh{
+    line-height:1rem;
+}
+.txtdv{
+    border-bottom: 1px solid gray;
+}
+.box{
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    background-clip: padding-box;
+}
+.bright{
+    border-right:1px dashed gray;
+}
+.wimg{
+    width: 0% !important;
+}
+.wimgR{
+    width: 18% !important;
+}
+.w-33{
+    width:40% !important;
+}
+.ltb{
+    margin-top:4px;
+}
+.modal-title{
+    color:rgb(25, 175, 147);
+}
+.label-title{
+    color:rgb(196, 193, 193);
+    font-size:13px;
+}
+.count-title{
+    font-size:18px;
+}
+.w-text{
+    font-size:18px;
+}
+.w-60{
+    width: 60%;
+}
+.w-90{
+    width: 95%;
+}
+.p-top{
+    /* margin-bottom:0.3rem !important; */
+}
